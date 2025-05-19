@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class MainShape extends CustomClipper<Path> {
@@ -57,7 +56,6 @@ class SubShape extends CustomClipper<Path> {
     return false;
   }
 }
-
 
 class RightShape extends CustomClipper<Path> {
   @override
@@ -192,16 +190,38 @@ class BottomShape extends CustomClipper<Path> {
     throw UnimplementedError();
   }
 }
+
 class RightChapeOfContainer extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     // double w=200;
     // double h=200;
     Path path_0 = Path();
-    path_0.moveTo(size.width*0.9964000,size.height*0.2620000);
-    path_0.cubicTo(size.width*0.9964000,size.height*0.6445000,size.width*0.9964000,size.height*0.6445000,size.width*0.9964000,size.height*0.7720000);
-    path_0.cubicTo(size.width*0.8925000,size.height*0.5782000,size.width*-0.0042000,size.height*0.7839000,size.width*0.0015000,size.height*0.5350000);
-    path_0.cubicTo(size.width*-0.0032000,size.height*0.2297000,size.width*0.9228000,size.height*0.4866000,size.width*0.9964000,size.height*0.2620000);
+    path_0.moveTo(size.width * 0.9964000, size.height * 0.2620000);
+    path_0.cubicTo(
+      size.width * 0.9964000,
+      size.height * 0.6445000,
+      size.width * 0.9964000,
+      size.height * 0.6445000,
+      size.width * 0.9964000,
+      size.height * 0.7720000,
+    );
+    path_0.cubicTo(
+      size.width * 0.8925000,
+      size.height * 0.5782000,
+      size.width * -0.0042000,
+      size.height * 0.7839000,
+      size.width * 0.0015000,
+      size.height * 0.5350000,
+    );
+    path_0.cubicTo(
+      size.width * -0.0032000,
+      size.height * 0.2297000,
+      size.width * 0.9228000,
+      size.height * 0.4866000,
+      size.width * 0.9964000,
+      size.height * 0.2620000,
+    );
     path_0.close();
     return path_0;
 
@@ -212,5 +232,38 @@ class RightChapeOfContainer extends CustomClipper<Path> {
   bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
     return false;
     throw UnimplementedError();
+  }
 }
+
+class ClipperShape extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    // double w=200;
+    // double h=200;
+    Path path_0 = Path();
+    path_0.moveTo(size.width * 0.2117109, size.height * 0.9404884);
+    path_0.lineTo(size.width * 0.1954498, size.height * 0.9411394);
+    path_0.lineTo(size.width * 0.2189046, size.height * 0.9367187);
+    path_0.quadraticBezierTo(
+      size.width * 0.4066545,
+      size.height * 0.5810486,
+      size.width * 0.5456253,
+      size.height * 0.2154998,
+    );
+    path_0.quadraticBezierTo(
+      size.width * 0.4578506,
+      size.height * -0.0098009,
+      size.width * 0.2117109,
+      size.height * 0.9404884,
+    );
+    path_0.close();
+
+    return path_0;
+  }
+
+  @override
+  bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
+    return false;
+    throw UnimplementedError();
+  }
 }

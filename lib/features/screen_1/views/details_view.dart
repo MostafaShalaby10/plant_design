@@ -15,7 +15,7 @@ class DetailsView extends StatelessWidget {
         child: Stack(
           children: [
             Positioned(
-              bottom: MediaQuery.of(context).size.height * .04,
+              bottom: MediaQuery.of(context).size.height * .055,
               left: 140.w,
               child: ClipPath(
                 clipper: SubShape(),
@@ -23,7 +23,7 @@ class DetailsView extends StatelessWidget {
                   alignment: Alignment.center,
                   height: 150.h,
                   width: 130.w,
-                  padding: EdgeInsets.only(top: 60.h),
+                  padding: EdgeInsets.only(top: 70.h),
                   color: Colors.green[200],
                   child: const CustomTextWidget(
                     text: "X2",

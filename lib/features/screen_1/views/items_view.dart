@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task_two/core/widgets/custom_text_widget.dart';
+import 'package:task_two/features/screen_2/views/items_view_fruit.dart';
 
 import 'details_view.dart';
 import 'shapes.dart';
@@ -94,15 +95,25 @@ class ItemsView extends StatelessWidget {
           Positioned(
             bottom: 0.h,
             left: MediaQuery.of(context).size.width * .2,
-            child: ClipPath(
-              clipper: BottomShape(),
-              child: Container(
-                color: Colors.white,
-                width: 250.w,
-                height: 160.h,
-                alignment: Alignment.bottomCenter,
-                child: const Icon(Icons.lock),
-                // child: Text("dsa smdak"),
+            child: InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ItemsViewFruit(),
+                  ),
+                );
+              },
+              child: ClipPath(
+                clipper: BottomShape(),
+                child: Container(
+                  color: Colors.white,
+                  width: 250.w,
+                  height: 160.h,
+                  alignment: Alignment.bottomCenter,
+                  child: const Icon(Icons.lock),
+                  // child: Text("dsa smdak"),
+                ),
               ),
             ),
           ),
@@ -164,14 +175,14 @@ class _CustomContainerState extends State<CustomContainer> {
                 children: [
                   CircleAvatar(
                     backgroundColor: Colors.green[200],
-                    radius: 12.r,
+                    radius: 15.r,
                     child: IconButton(
                       onPressed: () {
                         setState(() {
                           counter++;
                         });
                       },
-                      icon: const Icon(Icons.add, size: 8),
+                      icon: const Icon(Icons.add, size: 15),
                     ),
                   ),
                   CustomTextWidget(
@@ -181,7 +192,7 @@ class _CustomContainerState extends State<CustomContainer> {
                   ),
                   CircleAvatar(
                     backgroundColor: Colors.green[200],
-                    radius: 12.r,
+                    radius: 15,
                     child: IconButton(
                       onPressed: () {
                         setState(() {
@@ -190,7 +201,7 @@ class _CustomContainerState extends State<CustomContainer> {
                           }
                         });
                       },
-                      icon: const Icon(Icons.remove, size: 8),
+                      icon: const Icon(Icons.remove, size: 15),
                     ),
                   ),
                 ],
